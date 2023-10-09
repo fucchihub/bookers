@@ -10,12 +10,7 @@ end
 #            POST   /books(.:format)            books#create
 #new_book    GET    /books/new(.:format)        books#new
 #edit_book   GET    /books/:id/edit(.:format)   books#edit
-#list        GET    /books/:id(.:format)        books#show
+#book        GET    /books/:id(.:format)        books#show
 #            PATCH  /books/:id(.:format)        books#update
 #            PUT    /books/:id(.:format)        books#update
 #            DELETE /books/:id(.:format)        books#destroy
-
-#get 'books' => 'books#index'
-  #post 'books' => 'books#create'
-  #get 'books/:id' => 'books#show',as: 'list'
-  #get 'books/edit'
