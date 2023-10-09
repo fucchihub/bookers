@@ -1,11 +1,9 @@
 Rails.application.routes.draw do
-  get '/' => 'homes#top'
+  root to: 'homes#top'
   resources :books
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
 
-#Prefix      Verb   URI Pattern                 Controller#Action
-#            GET    /              	            homes#top
 #books       GET    /books(.:format)            books#index
 #            POST   /books(.:format)            books#create
 #new_book    GET    /books/new(.:format)        books#new

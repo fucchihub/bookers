@@ -1,4 +1,6 @@
-<h1>Books</h1>
+<p><%= flash[:notice] %></p>
+
+<h2>Books</h2>
 
 <table>
   <thead>
@@ -22,16 +24,10 @@
   </tbody>
 </table>
 
-
-<h2>New book</h2>
-
-
-<%
-=begin
-%>
+<h3>New book</h3>
 
 <% if @book.errors.any? %>
-  <p><%= @book.errors.count %> errors prohibited your book from being saved:</p>
+  <p><%= pluralize(@book.errors.count, "error") %> prohibited your book from being saved:</p>
   <ul>
     <% @book.errors.full_messages.each do |message| %>
       <li><%= message %></li>
@@ -39,19 +35,14 @@
   </ul>
 <% end %>
 
-<%
-=end
-%>
-
-
 <%= form_with model: @book, url: books_path, method: :post do |f| %>
-  <h4>Title</h4>
+  <h5>Title</h5>
   <%= f.text_field :title %>
 
-  <h4>Body</h4>
+  <h5>Body</h5>
   <%= f.text_area :body %>
 
-  <%= f.submit 'Create Book' %>
+  <p><%= f.submit 'Create Book' %></p>
 <% end %>
 
 
